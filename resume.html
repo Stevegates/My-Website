@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--
+		Author: Mateus Pinheiro de Lima
+		Filename: resume.html
+		Date: 01 April 2015
+		Since: 1.0
+		Version: 1.0
+		Description: This is a responsive static page that is used to diplay my resume on the internet
+								 I developed together with my friend Adolfo Melo
+	-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume: Mateus Pinheiro de Lima </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/icons/favicon.ico" />
+
+  <!-- SEO Meta -->
+	<meta name=”description” content="My name is Mateus Pinheiro de Lima and this is my web resume">
+	<link rel=”author” href="https://plus.google.com/+MateusPLima"/>
+
+	<!-- Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:400,700" rel="stylesheet" type="text/css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/resume-animate.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/resume-layout.css">
+
+
+	<!-- Javascript framework and plugins start here -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		var minDistance = 80,
+		marginTolerance = 20
+		windowH = $(window).height();
+
+		$(window).on('scroll', function () {
+			$( ".fading" ).each(function( index ) {
+
+					var scrollTop = $(window).scrollTop(),
+						elementOffset = $(this).offset().top,
+						distance      = (elementOffset - scrollTop);
+
+						var contentIsSmallerThanViewportHeight = (windowH > $(this).height() + marginTolerance);
+
+						if( distance < minDistance && contentIsSmallerThanViewportHeight ){
+							var fade = ((100 - ((distance - minDistance) * (-1))) * 0.01);
+							// console.log("fade: " + fade);
+							$( this ).css('opacity', fade);
+						} else if (distance > 150){
+								$( this ).css('opacity', 1);
+						};
+			});
+		});
+	</script>
+	<!-- Javascript framework and plugins end here -->
+
+</head>
+
+<body>
+
+	<div id="profile" >
+
+		<div id="profile-container">
+
+			<div id="info">
+
+				<figure id="img-profile-holder">
+					<a href="#">
+						<img id="img-profile" src="assets/images/mateusp.png" alt="Mateus' portrait picture">
+					</a>
+				</figure>
+
+				<div id="profile-gradient"></div>
+
+				<div id="info-holder">
+					<p id="profession" class=" animated rotateInDownRight">DEVELOPER</p>
+
+					<div class="animated slideInRight" id="profile-name">
+						<p>MATEUS LIMA</p>
+					</div>
+
+					<hr class="profile-hr animated rotateInUpRight">
+
+					<p id="short-description" class="animated rotateInUpLeft">
+						I'm a Brazilian developer that loves solving problems and understanding how things work, having an experience of living in GTA for a year.
+					</p>
+
+					<div  class="contact-icons animated fadeInUp">
+
+						<ul>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/mateus.p.lima">
+									<img src="assets/icons/facebook.svg" alt="facebook icon" rel="me">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://github.com/stevegates">
+									<img src="assets/icons/github.svg" alt="github icon" rel="me">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="mailto:mateus.p@me.com">
+									<img src="assets/icons/email.svg" alt="email icon" rel="me">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/in/mateuslima">
+									<img src="assets/icons/linkedin.svg" alt="linkedin icon" rel="me">
+								</a>
+							</li>
+							<li >
+								<a  target="_blank" href="https://instagram.com/mateus_p/">
+									<img class="reduced-size" src="assets/icons/instagram.svg" alt="instagram icon" rel="me">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="resume">
+
+		<div class="resume-item animated slideInUp" >
+
+			<div class="subject fading">
+
+				<h3>OBJECTIVE</h3>
+
+			</div>
+
+			<div class="description fading">
+
+				<p>Seeking a challenging intern position as a front end or game developer, where I can learn with the team and share knowledge that I have, and figure it out how programmin can aid business processes. </p>
+
+			</div>
+
+		</div>
+
+		<div class="resume-item animated slideInUp" >
+
+			<div class="subject fading">
+				<h3>SOFT SKILLS</h3>
+			</div>
+
+			<div class="description">
+				<ul class='skills-list'>
+					<li class="fading"> Love to help teammates when needed it and work well alone as well. </li>
+					<li class="fading"> Learn fast and has excellent problem solving skills.  </li>
+					<li class="fading"> Work focusing quality, efficiency and portability. </li>
+					<li class="fading"> Self-motivated to achive goals and eager to learn something new. </li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<div class="resume-item animated slideInUp">
+
+			<div class="subject fading">
+				<h3>TECH SKILLS</h3>
+			</div>
+
+			<div class="description">
+				<ul id="skills">
+					<li class="fading">HTML5</li>
+					<li class="fading">CSS3, Sass</li>
+					<li class="fading">JavaScript</li>
+					<li class="fading">JQuery, Bootstrap</li>
+					<li class="fading">Java, C++, C#</li>
+					<li class="fading">Ruby, Rails</li>
+					<li class="fading">MySQL, Access</li>
+					<li class="fading">Adobe Photoshop, Illustrator, InDesign</li>
+					<li class="fading">CMS, Wordpress</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="resume-item animated slideInUp ">
+
+			<div class="subject fading">
+				<h3>EXPERIENCE</h3>
+			</div>
+
+			<div class="description">
+
+				<div class="job-item">
+					<div class="job-position">
+						<h5 class="fading">BlackBerry Developer Group Manager</h5>
+						<p class="fading"><a href="https://www.facebook.com/groups/blackberryrn/">Natal</a>, Brazil  </p>
+						<p class="fading">
+							Sep 2012 - Apr 2013 </p>
+					</div>
+
+					<p class="job-description fading">
+						Organized events and workshops that gathered developers and designers to learn more about the upcoming BlackBerry 10 OS and devices and providded support from creation to publishing the app in the Blackberry World. Engaged in summits and worked together with managers from other cities in Brazil.
+					</p>
+
+				</div>
+
+				<div class="job-item ">
+					<div class="job-position">
+						<h5 class="fading"> Graphic and Web Designer </h5>
+						<p class="fading">IFRN, Brazil</p>
+					 	<p class="fading">
+							Apr 2012 - Dec 2012 </p>
+					</div>
+
+					<p class="job-description fading">
+						Conceptualized graphical guidelines for digital and printed e-learning course materials for IFRN. Designed layouts, images for books and events materials (DVDs, shirts, bags, banners). Maitanined the web portal previously created and participate in other different projects.
+					</p>
+				</div>
+
+				<div class="job-item ">
+					<div class="job-position">
+						<h5 class="fading"> Web Designer and IT Support Intern<br> </h5>
+						<p class="fading">IFRN, Brazil</p>
+					 	<p class="fading">
+							July 2011 - Feb 2012 </p>
+					</div>
+
+					<p class="job-description fading">
+						Worked in the e-learning department and rebuilt the <a href="http://portal.ead.ifrn.edu.br/"> web portal </a> using Wordpress to facilate creation and management of content, also provided local and virtual support to the Moodle plataform used by professors, tutors and students in the <a href="http://ead.ifrn.edu.br/moodle/"> e-learning plataform </a> and gave workshops to these users about how to effectively use Moodle, decreasing the number of problems that occurred in a daily basis.</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="resume-item animated slideInUp">
+			<div class="subject fading">
+				<h3>EDUCATION</h3>
+			</div>
+
+			<div class="description fading">
+				<div class="fading">
+				 	<p>
+					<span class="education-title">Computer Programmer Analyst
+				  </span><br/>
+				  2014 - Present</p>
+					<p class="education-description">Exchange student at Durham College, Oshawa, Canada</span></p>
+
+				</div>
+
+				<div class="fading">
+
+					<p><span class="education-title">Software Analisys and Development</span>
+					<br> 2012 - 2016</p>
+					<p class=""> IFRN - Federal Institute for Education, Science and Technology — Natal, Brazil </p>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="resume-item" id="thanks">
+
+			<div class="description" >
+
+				<h5>Thanks for visiting!</h5>
+
+				<p> If you have an awesome project or would just like to chat, go ahead and <a href="mailto:mateus.p@me.com">drop me a line!</a></p>
+
+				<div  class="contact-icons animated fadeInUp">
+						<ul>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/mateus.p.lima">
+									<img src="assets/icons/facebook.svg" alt="facebook icon" rel="me">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://github.com/stevegates">
+									<img src="assets/icons/github.svg" alt="github icon" rel="me">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="mailto:mateus.p@me.com">
+									<img src="assets/icons/email.svg" alt="email icon" rel="me">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/in/mateuslima">
+									<img src="assets/icons/linkedin.svg" alt="linkedin icon" rel="me">
+								</a>
+							</li>
+							<li >
+								<a  target="_blank" href="https://instagram.com/mateus_p/">
+									<img class="reduced-size" src="assets/icons/instagram.svg" alt="instagram icon" rel="me">
+								</a>
+							</li>
+						</ul>
+				</div>
+
+				<h6> Made with &#9829; in Toronto <br>© 2015 Mateus Pinheiro de Lima </h6>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
